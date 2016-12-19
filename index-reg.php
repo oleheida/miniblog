@@ -1,11 +1,11 @@
 <?php
-    require_once("db.php");
+    require_once("includes/db.php");
 
 ?>
 <?php if(isset($_SESSION['logged-user'])) : ?>
     Authorised as <?php echo $_SESSION['logged-user']->login;?>
-    <a href="views/logout.php">Log out</a>
+    <a href="models/logout.php">Log out</a>
 <?php else : ?>
-<a href="views/reg.php">Sign up</a>
-<a href="views/log.php">Sign in</a>
+<a href="models/reg.php">Sign up</a>
+<a href="models/log.php">Sign in</a>
 <?php endif; ?>

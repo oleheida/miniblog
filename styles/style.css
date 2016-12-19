@@ -1,0 +1,84 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+.logform {
+    padding-top: 10%;
+}
+
+.logform input:focus {
+    outline: none;
+}
+.logform input {
+    border-radius: 5px;
+    padding-left: 1%;
+}
+.navbar {
+    background-color: #565656;
+    border-radius: 0;
+    width: 100%;
+    opacity: 100;
+}
+.navbar ul li a {
+    font-weight: bold;
+    color: #E6E6E6;
+}
+.navbar ul li a:hover {
+    color: #353535;
+}
+.header-left {
+    padding-left: 14%;
+}
+.header-right {
+    padding-right: 14%;
+}
+.footer {
+    color: #E6E6E6;
+    background-color: #565656;
+    width: 100%;
+}
+
+.footer-1 {
+    padding: 14px 0 14px 0;
+    height: auto;
+    overflow: hidden;
+}
+.footer-p-head {
+    font-size: 18px;
+}
+.footer-p-body {
+    font-size: 14px;
+}
+.footer-p-body-mobile {
+    font-size: 20px;
+}
+.footer-2 {
+    height: auto;
+    overflow: hidden;
+    background-color: #353535;
+    padding: 10px 0 10px 0;
+    color: #858585;
+}
+.underline {
+    text-decoration: underline;
+}
+.footer ul{
+    padding-left: 0;
+}
+.footer ul li{
+    list-style-type: none;
+}
+.footer ul li a, .footer-p-body-mobile a, .footer-icons a i{
+    text-decoration: none;
+    color: #E6E6E6;
+    cursor: pointer;
+}
+.footer ul li{
+    font-size: 14px;
+    padding-top: 18px;
+}
+.footer-icons a i {
+    font-size: 1.8em;
+    padding-right: 18px;
+    color: #858585;
+}

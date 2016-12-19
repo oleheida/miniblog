@@ -4272,7 +4272,7 @@ interface QueryWriter
 	public function esc( $databaseStructure, $dontQuote = FALSE );
 
 	/**
-	 * Removes all tables and views from the database.
+	 * Removes all tables and models from the database.
 	 *
 	 * @return void
 	 */
@@ -6708,7 +6708,7 @@ class PostgreSQL extends AQueryWriter implements QueryWriter
 
 		foreach ( $this->getTables() as $t ) {
 			$t = $this->esc( $t );
-			//Some plugins (PostGIS have unremovable tables/views), avoid exceptions.
+			//Some plugins (PostGIS have unremovable tables/models), avoid exceptions.
 			try { $this->adapter->exec( "DROP TABLE IF EXISTS $t CASCADE " ); }catch( \Exception $e ) {}
 		}
 

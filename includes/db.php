@@ -1,6 +1,7 @@
 <?php
+require "rb.php";
+require_once ("config.php");
 
-require "libs/rb.php";
 
 R::setup('mysql:host=localhost;dbname=blog', 'root', '');
 
