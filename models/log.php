@@ -51,6 +51,7 @@ if(isset($data['do-log']))
             <ul class="nav navbar-nav navbar-right header-right">
                 <li><a href="/miniblog/models/log.php">Sign in</a></li>
                 <li><a href="/miniblog/models/reg.php">Sign up</a></li>
+            </ul>
         </nav>
     </header>
 <form action="log.php" class="logform col-lg-12 text-center " method="POST">

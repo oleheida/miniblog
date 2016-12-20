@@ -3,9 +3,6 @@
 require "includes/database.php";
 require "includes/config.php";
 include "includes/header.php";
-if($_SESSION['logged-user'] != 'm' && ['logged-user'] != 'n'){
-    header("Location: /miniblog/models/log.php");
-}
 ?>
 
     <div id="content">
