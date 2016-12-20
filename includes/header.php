@@ -37,6 +37,6 @@ require "db.php";
                         echo "<li style='display: none'><a href=''>Admin (for admin only)</a></li>";
                     }else{
                     echo "<li><a href='/miniblog/articles_admin.php'>Admin(for admin only)</a></li>"; }?>
-                    <li><a href="models/logout.php">Sign out</a></li>
+                    <li><a href="/miniblog/models/logout.php">Sign out</a></li>
             </nav>
     </header>

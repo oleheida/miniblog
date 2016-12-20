@@ -2,6 +2,9 @@
 require "../includes/database.php";
 include "../includes/header.php";
 require "admin.php";
+if($_SESSION['logged-user'] != 'm'){
+    header("Location: articles_home.php");
+}
 ?>
 
 <div class="container">
