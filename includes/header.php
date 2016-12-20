@@ -1,3 +1,6 @@
+<?php
+require "db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +24,7 @@
 
 <div id="wrapper">
 
-    <header id="header">
+    <header id="header navbar-fixed-top">
             <nav class="navbar container-fluid">
                 <ul class="nav navbar-nav header-left">
                     <li><a href="/miniblog/articles_home.php">DRB</a></li>
@@ -29,6 +32,10 @@
                     <li><a href="<?php echo $config['news']?>" target="_blank"">News</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right header-right">
+                    <?php if ($_SESSION['logged-user'] != 'm'){
+                        echo "<li style='display: none'><a href=''>Admin (for admin only)</a></li>";
+                    }else{
+                    echo "<li><a href='/miniblog/articles_admin.php'>Admin(for admin only)</a></li>"; }?>
                     <li><a href="models/logout.php">Sign out</a></li>
             </nav>
     </header>

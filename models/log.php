@@ -8,8 +8,8 @@ if(isset($data['do-log']))
     $user = R::findOne('users', 'login = ?', array($data['login']));
     if($user){
         if(password_verify($data['password'], $user->password)){
-            $_SESSION['logged-user'] = $user;
-            echo '<div style="color: green;">You have successfully authorised</div>';
+            $_SESSION['logged-user'] = $user->usertype;
+            header('Location: ../articles_home.php');
         }
         else {
             $errors[]="Incorrect password";
@@ -18,8 +18,6 @@ if(isset($data['do-log']))
     else{
         $errors[]="User with such login doesn't exist";
     }
-    if(!empty($errors)){
-        echo '<div style="color: red;">'.array_shift($errors).'</div>';}
 }
 ?>
 <!DOCTYPE html>
@@ -56,6 +54,8 @@ if(isset($data['do-log']))
         </nav>
     </header>
 <form action="log.php" class="logform col-lg-offset-5 col-lg-3 " method="POST">
+    <?php if(!empty($errors)){
+        echo '<div style="color: red;">'.array_shift($errors).'</div>';}?>
     <p>
         <label for="login">Login</label><br>
         <input type="text" name="login" id="login" value="<?php echo @$data['login'];?>">

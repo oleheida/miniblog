@@ -82,3 +82,16 @@ a {
     padding-right: 18px;
     color: #858585;
 }
+.content {
+    height: 100%;
+}
+.article-error {
+    font-size: 70px;
+    font-weight: bold;
+}
+.btn-all {
+    text-align: right;
+}
+.article {
+    padding-bottom: 30px;
+}

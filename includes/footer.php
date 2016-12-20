@@ -1,4 +1,5 @@
-<footer class="footer">
+<div class="push"></div>
+<footer class="footer navbar-fixed-bottom">
     <div class="container">
         <div class="footer-1 row">
             <div class="col-lg-4 col-md-4 col-sm-7 col-xs-7">
@@ -21,7 +22,7 @@
                     Ingormation
                 </p>
                 <ul class="p-body">
-                    <li><a href="#">Quality service</a></li>
+                    <li><a href="#">Support</a></li>
                     <li><a href="#">Callback</a></li>
                     <li><a href="#">About company</a></li>
                     <li><a href="#">Donation</a></li>
@@ -49,8 +50,6 @@
         </div>
     </div>
 </footer>
-
-</div>
 
 </body>
 </html>

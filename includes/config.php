@@ -1,5 +1,4 @@
 <?php
-
 $config = array(
     'title' => 'DaRealBlog',
     'about' => 'http://www.turboatom.com.ua/ru/',
@@ -11,6 +10,7 @@ $config = array(
         'name' => 'blog'
     )
 
-)
+);
+
 
 ?>

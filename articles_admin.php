@@ -1,18 +1,21 @@
 <?php
-
 require "includes/database.php";
-require "includes/config.php";
 include "includes/header.php";
-?>
 
+if($_SESSION['logged-user'] != 'm'){
+  header("Location: articles_home.php");
+}
+?>
     <div id="content">
       <div class="container">
         <div class="row">
-          <section class="col-lg-12 col-md-10">
+          <section class="">
             <div class="block">
               <h3>Latest updates</h3>
               <div class="block__content">
                 <div class="articles articles__horizontal">
+
+                      <a href="articles_admin.php?action=add"><button class="btn">Add article</button></a>
 
                   <?php
                   $articles = mysqli_query($connection, "SELECT * FROM articles ORDER BY id DESC");
@@ -21,9 +24,12 @@ include "includes/header.php";
                     while  ($art = mysqli_fetch_assoc($articles))
                     {
                       ?>
-                      <article class="article">
+                      <article class="article ">
                         <div class="article-info">
-                          <a href="article.php?id=<?php echo $art['id'] ?>"><?php echo $art['title'] ?></a>
+                          <a class="col-lg-8" href="article.php?id=<?php echo $art['id'] ?>"><?php echo $art['title'] ?></a>
+
+                          <a class="col-lg-1 col-lg-offset-2" href="articles_admin.php?action=edit&id=<?=$art['id']?>"><button class="btn">Edit</button> </a>
+                          <a class="col-lg-1" href="articles_admin.php?action=delete&id=<?=$art['id']?>"><button class="btn">Delete</button></a>
 
                           <div class="article-info-cat">
                             <?php

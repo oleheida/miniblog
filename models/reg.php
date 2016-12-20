@@ -1,5 +1,6 @@
 <?php
     require ("../includes/db.php");
+    require ("../includes/config.php");
     $data = $_POST;
     if(isset($data['do-reg'])){
         $errors = array();
@@ -30,14 +31,16 @@
             $user->email = $data['email'];
             $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
             R::store($user);
-            echo '<div style="color: green;">Thank you for your sign up!</div>';
+            header('Location: /miniblog/models/log.php');
         }
         else
-        {
-            echo '<div style="color: red;">'.array_shift($errors).'</div>';
-        }
+        { ?>
+
+
+    <?php $er = '<div class="text-center" style="color: red;">'.array_shift($errors).'</div>';
     }
-?>
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +74,7 @@
                 <li><a href="/miniblog/models/reg.php">Sign up</a></li>
         </nav>
     </header>
-
+    <?php if (!empty($errors)){ echo $er;}?>
 <form class="text-center logform col-lg-offset-4 col-lg-3 " action="reg.php" method="POST">
     <p>
         <label for="login">Login</label><br>
