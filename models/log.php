@@ -53,7 +53,7 @@ if(isset($data['do-log']))
                 <li><a href="/miniblog/models/reg.php">Sign up</a></li>
         </nav>
     </header>
-<form action="log.php" class="logform col-lg-offset-5 col-lg-3 " method="POST">
+<form action="log.php" class="logform col-lg-12 text-center " method="POST">
     <?php if(!empty($errors)){
         echo '<div style="color: red;">'.array_shift($errors).'</div>';}?>
     <p>

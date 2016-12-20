@@ -17,19 +17,11 @@ if(mysqli_num_rows($article) == 0){
     else
   {
 $art = mysqli_fetch_assoc($article);
-foreach ($categories as $cat)
-{
-  if($cat['id'] == $art['category_id'])
-  {
-    $art_cat = $cat;
-    break;
-  }
-};
 ?>
 <div id="content">
   <div class="container">
     <div class="row">
-      <section class="content__left col-lg-9 col-md-8">
+      <section class="col-lg-9 col-md-8">
         <div class="block">
          <a href="/miniblog/articles_home.php"> <button class="btn btn-all">All articles</button></a>
           <h3><?php echo $art['title']?></h3>
@@ -37,9 +29,6 @@ foreach ($categories as $cat)
             <div class="articles articles__horizontal">
                 <article class="article">
                   <div class="article-info">
-                    <div class="article-info-cat">
-                      <small>Category: <span><?php echo $art_cat['category'] ?></span></small>
-                    </div>
                     <div class="article-info-date">
                       <small>Published: <span><?php echo $art['pubdate'] ?></span></small>
                     </div>
@@ -61,5 +50,5 @@ foreach ($categories as $cat)
 
 
 <?php
-include "includes/footer.php";
+include "includes/footer-single.php";
 ?>

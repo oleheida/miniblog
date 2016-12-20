@@ -24,19 +24,6 @@ include "includes/header.php";
                       <article class="article">
                         <div class="article-info">
                           <a href="article.php?id=<?php echo $art['id'] ?>"><?php echo $art['title'] ?></a>
-
-                          <div class="article-info-cat">
-                            <?php
-                            foreach ($categories as $cat)
-                            {
-                              if($cat['id'] == $art['category_id'])
-                              {
-                                $art_cat = $cat;
-                                break;
-                              }
-                            }
-                            ?>
-                            <small>Category: <span><?php echo $art_cat['category'] ?></span></small>
                           </div>
                           <div class="article-info-date">
                             <small>Published: <span><?php echo $art['pubdate'] ?></span></small>

@@ -1,5 +1,5 @@
 <div class="push"></div>
-<footer class="footer navbar-static-bottom">
+<footer class="footer navbar-fixed-bottom">
     <div class="container">
         <div class="footer-1 row">
             <div class="col-lg-4 col-md-4 col-sm-7 col-xs-7">

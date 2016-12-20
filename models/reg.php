@@ -75,7 +75,7 @@
         </nav>
     </header>
     <?php if (!empty($errors)){ echo $er;}?>
-<form class="text-center logform col-lg-offset-4 col-lg-3 " action="reg.php" method="POST">
+<form class="text-center logform col-lg-12 " action="reg.php" method="POST">
     <p>
         <label for="login">Login</label><br>
         <input type="text" name="login" id="login" value="<?php echo @$data['login'];?>">
