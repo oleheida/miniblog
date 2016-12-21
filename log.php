@@ -1,5 +1,5 @@
 <?php
-require "../includes/db.php";
+require "includes/db.php";
 
 $data =  $_POST;
 if(isset($data['do-log']))
@@ -9,7 +9,7 @@ if(isset($data['do-log']))
     if($user){
         if(password_verify($data['password'], $user->password)){
             $_SESSION['logged-user'] = $user->usertype;
-            header('Location: ../articles_home.php');
+            header('Location: articles_home.php');
         }
         else {
             $errors[]="Incorrect password";
@@ -37,7 +37,8 @@ if(isset($data['do-log']))
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 

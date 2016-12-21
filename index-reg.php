@@ -7,5 +7,5 @@
     <a href="models/logout.php">Log out</a>
 <?php else : ?>
 <a href="models/reg.php">Sign up</a>
-<a href="models/log.php">Sign in</a>
+<a href="log.php">Sign in</a>
 <?php endif; ?>
